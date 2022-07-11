@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Shopping | Produit | Ajout{% endblock %}
+
+{% block body %}
+    <h1 class="titre">Nouveau produit</h1>
+
+    <div class="affichage">
+        <div class="profile">
+            {{ form_start(formProduit) }}
+            
+            {{ form_row( formProduit.nom ) }}
+            {{ form_row( formProduit.categorie ) }}
+            {{ form_row( formProduit.prix ) }}
+            {{ form_row( formProduit.reference ) }}
+
+            <button class="btn-success">Ajoute</button>
+
+            {{ form_end(formProduit) }}
+        </div>
+    </div>
+
+{% endblock %}

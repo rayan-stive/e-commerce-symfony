@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.titre {
+    font-family: serif;
+    /* font-size: 1.2em; */
+}
+
+.titre2 {
+    font-family: sans-serif;
+}

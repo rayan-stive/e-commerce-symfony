@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}e-Tsena{% endblock %}</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    {% block stylesheets %}{% endblock %}
+    {% block javascripts %}{% endblock %}
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="image/logo.jpg" alt="" class="shop" />
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="{{ path('app_accueil')}}">ACCUEIL</a></li>
+                    <li><a href="{{ path('app_client')}}">CLIENT</a></li>
+                    <li><a href="{{ path('app_produit')}}">PRODUIT</a></li>
+                    <li><a href="{{ path('app_fournisseur')}}">FOURNISSEUR</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        {# Contenu #}
+        {% block body %}{% endblock %}
+    </div>
+</body>
+</html>

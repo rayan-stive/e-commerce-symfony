@@ -1,0 +1,22 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Shopping | Produit | Détails{%  endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+{% endblock %}
+
+{% block body %}
+   <h1 class="titre">Détail d'un produit</h1>
+
+   <div class="affichage">
+        <div class="profile">
+            <p><span> Référence : </span>{{ produit.reference }} </p>
+            <p><span> Nom : </span>{{ produit.nom }} </p>
+            <p><span> Catégorie : </span>{{ produit.categorie }} </p>
+            <p><span> Prix : </span>{{ produit.prix }} </p>
+            <p><span> Stock : </span> 0 </p>
+        </div>
+   </div>
+{% endblock %}
+

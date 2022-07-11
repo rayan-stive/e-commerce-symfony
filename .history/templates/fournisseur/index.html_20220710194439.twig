@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Shopping | Fournisseur{% endblock %}
+
+{% block body %}
+    <h1 class="titre">Fournisseur</h1>
+
+    <div class="tableau">
+        <table id="listes">
+            <tr>
+                <th class="nouveau"><span><a href="{{ path('nouveau_produit') }}" class="btn_nouveau"> + </a></span><span class="identifiant">Identifiant</span></th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>CIN</th>
+                <th>Téléphone</th>
+                <th>Adresse</th>
+                <th>Action</th>
+
+            </tr>
+            {% for client in clients %}
+                <tr>
+                    <td>{{ client.id }}</td>
+                    <td>{{ client.nom }}</td>
+                    <td>{{ client.prenom }}</td>
+                    <td>{{ client.telephone }}</td>
+                    <td>{{ client.adresse }}</td>
+                    <td class="action"><a href="{{ path('editer', { 'id':client.id }) }}">Editer</a><button class="supprimer">Supprimer</button></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

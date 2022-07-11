@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Sans Comic';
+    src: url();
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.contenu {
+    text-align: center;
+}
+
+.titre {
+    font-family: serif;
+    /* font-size: 1.2em; */
+}
+
+.titre2 {
+    font-family: sans-serif, 'Sans Comic';
+    font-style:oblique;
+}
+
+p {
+    color: rgb(23, 234, 23);
+}
+
+.flottant {
+    float: left;
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+}
+
+.dessous {
+    clear: both;
+}

@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Shopping | Produit | Ajout{% endblock %}
+
+{% block body %}
+    <h1>Nouveau produit</h1>
+
+    {{ form_start(formProduit) }}
+    
+    {{ form_row( formProduit.nom ) }}
+    {{ form_row( formProduit.nom ) }}
+    {{ form_row( formProduit.nom ) }}
+
+    
+    {{ form_end(formProduit) }}
+
+{% endblock %}

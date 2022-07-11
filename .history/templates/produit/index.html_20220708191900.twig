@@ -1,0 +1,35 @@
+{% extends "base.html.twig" %}
+
+{% block title%} Shopping | Produit  {% endblock %}
+
+{% block body %}
+
+<div class="contenu">
+
+    <h1 class="titre">Produit</h1>
+<div class="tableau">
+    <table id="listes">
+        <tr>
+            <th><span><a href="{{ path('nouveau_produit') }}"> + </a></span> Identifiant></th>
+            <th>Référence</th>
+            <th>Nom</th>
+            <th>Catégorie</th>
+            <th>Prix</th>
+            <th>Action</th>
+
+        </tr>
+        {% for produit in produits %}
+            <tr>
+                <td>{{ produit.id }}</td>
+                <td>{{ produit.reference }}</td>
+                <td>{{ produit.nom }}</td>
+                <td>{{ produit.categorie }}</td>
+                <td>{{ produit.prix }}</td>
+                <td class="action"><a href="{{ path('editer', { 'id':produit.id }) }}">Editer</a><button class="supprimer">Supprimer</button></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+</div>
+
+{% endblock %}

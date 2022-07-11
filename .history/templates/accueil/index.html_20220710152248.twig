@@ -1,0 +1,14 @@
+{% extends "Base.html.twig" %}
+
+{% block title%} Shopping | Accueil {% endblock %}
+
+{% block body %}
+    <h1 class="titre">Accueil</h1>
+
+    {% for produit in produits %}     
+        <article>
+            <h2>{{ produit.nom }}</h2>
+            <p>{{ produit.prix }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}

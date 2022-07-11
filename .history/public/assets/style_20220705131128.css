@@ -1,0 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.titre {
+    color: red;
+    text-align: center;
+}
